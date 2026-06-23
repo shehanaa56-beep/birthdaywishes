@@ -3,16 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Delete } from 'lucide-react';
 
 // SVG Baby's Breath flowers component
-const BabysBreath = ({ style, scale = 1, rotate = 0 }) => (
+const BabysBreath = ({ className, style, scale = 1, rotate = 0 }) => (
   <svg
+    className={`babys-breath-svg ${className || ''}`.trim()}
     viewBox="0 0 150 300"
     fill="none"
     style={{
-      position: 'absolute',
-      width: '190px',
-      height: '380px',
-      pointerEvents: 'none',
-      zIndex: -1,
       transform: `scale(${scale}) rotate(${rotate}deg)`,
       ...style
     }}
@@ -58,20 +54,11 @@ const BabysBreath = ({ style, scale = 1, rotate = 0 }) => (
 // Heart Wire Clip SVG
 const HeartWireClip = () => (
   <svg
+    className="heart-wire-clip"
     viewBox="0 0 24 24"
     fill="none"
     stroke="var(--mint-blue)"
     strokeWidth="1.6"
-    style={{
-      position: 'absolute',
-      top: '-24px',
-      left: 'calc(50% - 15px)',
-      width: '30px',
-      height: '30px',
-      zIndex: 10,
-      transform: 'rotate(-5deg)',
-      filter: 'drop-shadow(0 1.5px 2px rgba(49, 68, 74, 0.15))'
-    }}
   >
     <path d="M12 5 C10.5 3 8 3.5 6.5 5 C5 6.5 5 9 6.5 10.5 L12 16 L17.5 10.5 C19 9 19 6.5 17.5 5 C16 3.5 13.5 3 12 5 Z" />
     <path d="M12 7 C11.5 5.8 9.5 6.2 8.5 7.2 C7.5 8.2 7.5 9.8 8.5 10.8 L12 14.3 L15.5 10.8 C16.5 9.8 16.5 8.2 15.5 7.2 C14.5 6.2 12.5 5.8 12 7 Z" />
@@ -134,34 +121,33 @@ const ScallopedTag = () => (
         height: 16px;
         color: var(--mint-blue);
       }
-    `}</style>
-    <svg className="tag-bow" viewBox="0 0 24 10" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M12 5 C8 1 4 1 4 4 C4 7 8 5 12 5" />
-      <path d="M12 5 C16 1 20 1 20 4 C20 7 16 5 12 5" />
-      <circle cx="12" cy="5" r="1.2" fill="currentColor" />
-      <path d="M12 5 C11 8 9 10 7 10" />
-      <path d="M12 5 C13 8 15 10 17 10" />
-    </svg>
-    <div className="scalloped-badge">
-      <div className="tag-text">a little surprise awaits</div>
-      <div className="tag-heart">🩵</div>
+        @media (max-width: 480px) {
+          .scalloped-tag-wrapper {
+            transform: scale(0.8) rotate(-12deg);
+            left: -15px;
+            bottom: -15px;
+          }
+        }
+      `}</style>
+      <svg className="tag-bow" viewBox="0 0 24 10" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M12 5 C8 1 4 1 4 4 C4 7 8 5 12 5" />
+        <path d="M12 5 C16 1 20 1 20 4 C20 7 16 5 12 5" />
+        <circle cx="12" cy="5" r="1.2" fill="currentColor" />
+        <path d="M12 5 C11 8 9 10 7 10" />
+        <path d="M12 5 C13 8 15 10 17 10" />
+      </svg>
+      <div className="scalloped-badge">
+        <div className="tag-text">a little surprise awaits</div>
+        <div className="tag-heart">🩵</div>
+      </div>
     </div>
-  </div>
-);
+  );
 
 // Keypad card corner ribbon bow with daisy
 const RibbonBow = () => (
   <svg
+    className="ribbon-bow"
     viewBox="0 0 100 80"
-    style={{
-      position: 'absolute',
-      top: '-18px',
-      right: '-18px',
-      width: '85px',
-      height: '68px',
-      zIndex: 15,
-      filter: 'drop-shadow(0 2px 4px rgba(49, 68, 74, 0.12))'
-    }}
   >
     {/* Bow Loops */}
     <path d="M50 40 C32 12 12 12 12 32 C12 52 32 45 50 40" fill="rgba(207, 232, 225, 0.95)" stroke="var(--mint-blue)" strokeWidth="1" />
@@ -189,17 +175,8 @@ const RibbonBow = () => (
 // Flowy satin ribbon tail wrapping around
 const FlowingRibbon = () => (
   <svg
+    className="flowing-ribbon"
     viewBox="0 0 400 100"
-    style={{
-      position: 'absolute',
-      bottom: '-35px',
-      left: '-20px',
-      width: '420px',
-      height: '105px',
-      zIndex: -2,
-      pointerEvents: 'none',
-      filter: 'drop-shadow(0 4px 8px rgba(49, 68, 74, 0.08))'
-    }}
   >
     <path
       d="M10 60 C80 35 180 115 280 55 C330 25 365 40 390 60"
@@ -534,12 +511,115 @@ export default function PasscodeScreen({ onSuccess }) {
             max-width: 360px;
           }
         }
+
+        @media (max-width: 480px) {
+          .passcode-screen {
+            gap: 50px;
+            padding-top: 20px;
+          }
+          
+          .polaroid-card-box {
+            width: 100%;
+            max-width: 280px;
+          }
+          
+          .polaroid-card-box .polaroid-img-container {
+            height: 290px;
+          }
+          
+          .polaroid-card-box .polaroid-caption {
+            font-size: 22px;
+          }
+          
+          .keypad-container {
+            max-width: 300px;
+            padding: 30px 20px;
+          }
+          
+          .keypad-title {
+            font-size: 26px;
+          }
+          
+          .grid-pad {
+            max-width: 240px;
+            gap: 12px 16px;
+          }
+          
+          .neumorphic-btn {
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+          }
+          
+          .dashed-hint-box {
+            padding: 6px 16px;
+            font-size: 11px;
+            margin-top: 25px;
+          }
+
+          .babys-breath-svg {
+            transform: scale(0.6) !important;
+          }
+          
+          .flowing-ribbon {
+            width: 300px;
+            left: -10px;
+            bottom: -25px;
+          }
+          
+          .ribbon-bow {
+            transform: scale(0.8);
+            top: -12px;
+            right: -12px;
+          }
+        }
+        
+        /* New CSS classes for extracted inline styles */
+        .babys-breath-svg {
+          position: absolute;
+          width: 190px;
+          height: 380px;
+          pointer-events: none;
+          z-index: -1;
+        }
+        
+        .heart-wire-clip {
+          position: absolute;
+          top: -24px;
+          left: calc(50% - 15px);
+          width: 30px;
+          height: 30px;
+          z-index: 10;
+          transform: rotate(-5deg);
+          filter: drop-shadow(0 1.5px 2px rgba(49, 68, 74, 0.15));
+        }
+        
+        .ribbon-bow {
+          position: absolute;
+          top: -18px;
+          right: -18px;
+          width: 85px;
+          height: 68px;
+          z-index: 15;
+          filter: drop-shadow(0 2px 4px rgba(49, 68, 74, 0.12));
+        }
+        
+        .flowing-ribbon {
+          position: absolute;
+          bottom: -35px;
+          left: -20px;
+          width: 420px;
+          height: 105px;
+          z-index: -2;
+          pointer-events: none;
+          filter: drop-shadow(0 4px 8px rgba(49, 68, 74, 0.08));
+        }
       `}</style>
 
       {/* Decorative Baby's Breath Flowers placed behind cards */}
-      <BabysBreath style={{ left: '-50px', top: '-110px' }} scale={0.9} rotate={-15} />
-      <BabysBreath style={{ left: '270px', top: '-130px' }} scale={0.8} rotate={35} />
-      <BabysBreath style={{ right: '-50px', bottom: '-50px' }} scale={0.9} rotate={160} />
+      <BabysBreath className="babys-breath-svg" style={{ left: '-50px', top: '-110px' }} scale={0.9} rotate={-15} />
+      <BabysBreath className="babys-breath-svg" style={{ left: '270px', top: '-130px' }} scale={0.8} rotate={35} />
+      <BabysBreath className="babys-breath-svg" style={{ right: '-50px', bottom: '-50px' }} scale={0.9} rotate={160} />
 
       {/* Polaroid Hanging Photo Section */}
       <div className="polaroid-holder">
