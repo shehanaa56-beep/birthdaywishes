@@ -199,13 +199,11 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
             font-size: 34px;
           }
           .scrapbook-grid {
-            grid-template-columns: 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px 15px;
           }
           .grid-arrow-cell {
-            transform: rotate(-90deg); /* align arrow horizontally if stacked */
-            height: 20px;
-            margin: 10px 0;
+            display: none !important;
           }
         }
 
@@ -216,6 +214,20 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
           .back-link {
             font-size: 18px;
             margin-bottom: 20px;
+          }
+          .memory-desc {
+            font-size: 13px;
+          }
+          .memory-polaroid {
+            padding: 10px 10px 16px 10px;
+          }
+          .polaroid-caption-main {
+            font-size: 15px;
+            margin-top: 8px;
+          }
+          .polaroid-caption-sub {
+            font-size: 9px;
+            margin-top: 2px;
           }
         }
       `}</style>
