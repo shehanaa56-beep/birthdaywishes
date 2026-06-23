@@ -338,6 +338,26 @@ export default function CelebrationBox({ onBack, onComplete }) {
         .garden-btn:active {
           transform: translateY(1px) scale(0.99);
         }
+
+        @media (max-width: 768px) {
+          .celebration-title {
+            font-size: 34px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .celebration-title {
+            font-size: 28px;
+          }
+          .back-link {
+            font-size: 18px;
+            margin-bottom: 20px;
+          }
+          .cake-wrapper {
+            transform: scale(0.85);
+            margin: 20px 0;
+          }
+        }
       `}</style>
 
       {/* Back link */}

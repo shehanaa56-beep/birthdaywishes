@@ -288,37 +288,73 @@ export default function LetterBox({ onBack, onComplete }) {
           pointer-events: none;
         }
 
+        @media (max-width: 768px) {
+          .letter-title {
+            font-size: 34px;
+          }
+        }
+
         @media (max-width: 480px) {
+          .letter-title {
+            font-size: 28px;
+          }
+          .back-link {
+            font-size: 18px;
+            margin-bottom: 20px;
+          }
           .envelope-wrapper {
-            width: 320px;
-            height: 200px;
+            width: 290px;
+            height: 180px;
           }
           .envelope-fold-bottom {
-            border-left-width: 160px;
-            border-right-width: 160px;
-            border-bottom-width: 110px;
+            border-left-width: 145px;
+            border-right-width: 145px;
+            border-bottom-width: 100px;
           }
           .envelope-fold-left {
-            border-top-width: 100px;
-            border-bottom-width: 100px;
-            border-left-width: 170px;
+            border-top-width: 90px;
+            border-bottom-width: 90px;
+            border-left-width: 155px;
           }
           .envelope-fold-right {
-            border-top-width: 100px;
-            border-bottom-width: 100px;
-            border-right-width: 170px;
+            border-top-width: 90px;
+            border-bottom-width: 90px;
+            border-right-width: 155px;
           }
           .envelope-flap {
-            border-left-width: 160px;
-            border-right-width: 160px;
-            border-top-width: 110px;
+            border-left-width: 145px;
+            border-right-width: 145px;
+            border-top-width: 100px;
+          }
+          .wax-seal {
+            width: 45px;
+            height: 45px;
+            font-size: 20px;
           }
           .letter-paper {
-            padding: 30px 20px;
+            padding: 24px 16px;
           }
           .letter-content {
-            font-size: 21px;
-            line-height: 28px;
+            font-size: 17px;
+            line-height: 22px;
+          }
+          .letter-salutation {
+            margin-bottom: 14px;
+          }
+          .letter-paragraph {
+            margin-bottom: 16px;
+            text-indent: 10px;
+          }
+          .letter-signoff {
+            margin-top: 20px;
+          }
+          .return-btn-container {
+            margin-top: 20px;
+          }
+          .return-btn {
+            font-size: 12px;
+            padding: 10px 22px;
+            letter-spacing: 0.5px;
           }
         }
       `}</style>

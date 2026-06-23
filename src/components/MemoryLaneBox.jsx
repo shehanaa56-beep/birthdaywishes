@@ -195,6 +195,9 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
         }
 
         @media (max-width: 768px) {
+          .memory-title {
+            font-size: 34px;
+          }
           .scrapbook-grid {
             grid-template-columns: 1fr;
             gap: 20px;
@@ -203,6 +206,16 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
             transform: rotate(-90deg); /* align arrow horizontally if stacked */
             height: 20px;
             margin: 10px 0;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .memory-title {
+            font-size: 28px;
+          }
+          .back-link {
+            font-size: 18px;
+            margin-bottom: 20px;
           }
         }
       `}</style>

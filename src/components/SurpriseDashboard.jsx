@@ -165,6 +165,7 @@ const CornerBabysBreath = ({ style, scale = 1, rotate = 0 }) => (
   <svg
     viewBox="0 0 150 300"
     fill="none"
+    className="corner-deco"
     style={{
       position: 'absolute',
       width: '180px',
@@ -193,6 +194,7 @@ const CornerBabysBreath = ({ style, scale = 1, rotate = 0 }) => (
 const CornerRibbon = ({ isLeft }) => (
   <svg
     viewBox="0 0 300 120"
+    className="corner-deco"
     style={{
       position: 'absolute',
       bottom: '-30px',
@@ -429,12 +431,46 @@ export default function SurpriseDashboard({ completedBoxes, onSelectBox, onEnter
 
         @media (max-width: 768px) {
           .boxes-grid {
-            grid-template-columns: 1fr;
-            gap: 45px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+          }
+
+          .box-card-container {
+            min-width: 0;
+            width: 100%;
+          }
+
+          .box-card-container:nth-child(3) {
+            grid-column: span 2;
+          }
+
+          .giftbox-wrapper {
+            transform: scale(0.58);
+            transform-origin: top center;
+            margin-bottom: -90px;
+          }
+
+          .box-title-text {
+            font-size: 16px;
+            margin-top: 5px;
+          }
+
+          .box-sub-text {
+            font-size: 13px;
+            margin-top: 3px;
+            margin-bottom: 6px;
+          }
+
+          .status-badge {
+            font-size: 10px;
           }
           
           .dashboard-title {
-            font-size: 34px;
+            font-size: 32px;
+          }
+
+          .corner-deco {
+            display: none !important;
           }
         }
       `}</style>

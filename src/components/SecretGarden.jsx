@@ -106,13 +106,59 @@ export default function SecretGarden({ onBack }) {
         }
 
         @media (max-width: 768px) {
+          .garden-intro-hint {
+            font-size: 20px;
+            margin-bottom: 16px;
+          }
           .garden-quote {
-            font-size: 34px;
+            font-size: 32px;
             line-height: 1.35;
+            margin-bottom: 24px;
+          }
+          .daisy-row {
+            margin-bottom: 24px;
           }
           .daisy-row svg {
             width: 24px;
             height: 24px;
+            margin: 0 4px;
+          }
+          .garden-subtitle {
+            font-size: 24px;
+            margin-bottom: 40px;
+          }
+          .garden-btn {
+            font-size: 14px;
+            padding: 14px 28px;
+            letter-spacing: 1px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .garden-intro-hint {
+            font-size: 18px;
+            margin-bottom: 12px;
+          }
+          .garden-quote {
+            font-size: 24px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+          }
+          .daisy-row {
+            margin-bottom: 20px;
+          }
+          .daisy-row svg {
+            width: 20px;
+            height: 20px;
+            margin: 0 3px;
+          }
+          .garden-subtitle {
+            font-size: 20px;
+            margin-bottom: 30px;
+          }
+          .garden-btn {
+            font-size: 13px;
+            padding: 12px 24px;
           }
         }
       `}</style>
