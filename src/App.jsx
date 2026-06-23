@@ -8,9 +8,10 @@ import LetterBox from './components/LetterBox';
 import MemoryLaneBox from './components/MemoryLaneBox';
 import CelebrationBox from './components/CelebrationBox';
 import SecretGarden from './components/SecretGarden';
+import GiftRevealPage from './components/GiftRevealPage';
 
 export default function App() {
-  const [view, setView] = useState('passcode'); // 'passcode' | 'dashboard' | 'box1' | 'box2' | 'box3' | 'garden'
+  const [view, setView] = useState('passcode'); // 'passcode' | 'dashboard' | 'box1' | 'box2' | 'box3' | 'gift-reveal' | 'garden'
   const [completedBoxes, setCompletedBoxes] = useState({
     box1: false,
     box2: false,
@@ -154,7 +155,21 @@ export default function App() {
             <CelebrationBox
               onBack={() => setView('dashboard')}
               onComplete={() => markBoxCompleted('box3')}
+              onOpenGift={() => setView('gift-reveal')}
             />
+          </motion.div>
+        );
+      case 'gift-reveal':
+        return (
+          <motion.div
+            key="gift-reveal"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8 }}
+            className="page-container"
+          >
+            <GiftRevealPage onNext={() => setView('garden')} />
           </motion.div>
         );
       case 'garden':

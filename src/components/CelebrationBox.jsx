@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 
-export default function CelebrationBox({ onBack, onComplete }) {
+export default function CelebrationBox({ onBack, onComplete, onOpenGift }) {
   const [isBlownOut, setIsBlownOut] = useState(false);
 
   const handleBlowOut = () => {
@@ -83,7 +83,11 @@ export default function CelebrationBox({ onBack, onComplete }) {
 
   const handleOpenGift = () => {
     onComplete();
-    onBack();
+    if (onOpenGift) {
+      onOpenGift();
+    } else {
+      onBack();
+    }
   };
 
   return (
