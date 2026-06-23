@@ -228,8 +228,20 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
             }}
           >
             <div className="polaroid-tape" />
-            <div className={`polaroid-inner-box ${memories[0].isGradient ? 'gradient' : 'solid'}`}>
-              <div className="polaroid-num-text">{memories[0].id}</div>
+            <div className="polaroid-inner-box" style={{ position: 'relative', overflow: 'hidden' }}>
+              <img src="/images/1.jpeg" alt={memories[0].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div style={{
+                position: 'absolute',
+                top: '8px',
+                right: '8px',
+                background: 'rgba(49, 68, 74, 0.7)',
+                color: '#fff',
+                fontSize: '11px',
+                fontWeight: 'bold',
+                padding: '2px 6px',
+                borderRadius: '10px',
+                backdropFilter: 'blur(2px)'
+              }}>{memories[0].id}</div>
             </div>
             <div className="polaroid-caption-main">{memories[0].title}</div>
             <div className="polaroid-caption-sub">{memories[0].subtitle}</div>
@@ -248,8 +260,20 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
             }}
           >
             <div className="polaroid-tape" />
-            <div className={`polaroid-inner-box ${memories[1].isGradient ? 'gradient' : 'solid'}`}>
-              <div className="polaroid-num-text">{memories[1].id}</div>
+            <div className="polaroid-inner-box" style={{ position: 'relative', overflow: 'hidden' }}>
+              <img src="/images/1.jpeg" alt={memories[1].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div style={{
+                position: 'absolute',
+                top: '8px',
+                right: '8px',
+                background: 'rgba(49, 68, 74, 0.7)',
+                color: '#fff',
+                fontSize: '11px',
+                fontWeight: 'bold',
+                padding: '2px 6px',
+                borderRadius: '10px',
+                backdropFilter: 'blur(2px)'
+              }}>{memories[1].id}</div>
             </div>
             <div className="polaroid-caption-main">{memories[1].title}</div>
             <div className="polaroid-caption-sub">{memories[1].subtitle}</div>
@@ -268,8 +292,20 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
             }}
           >
             <div className="polaroid-tape" />
-            <div className={`polaroid-inner-box ${memories[2].isGradient ? 'gradient' : 'solid'}`}>
-              <div className="polaroid-num-text">{memories[2].id}</div>
+            <div className="polaroid-inner-box" style={{ position: 'relative', overflow: 'hidden' }}>
+              <img src="/images/1.jpeg" alt={memories[2].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div style={{
+                position: 'absolute',
+                top: '8px',
+                right: '8px',
+                background: 'rgba(49, 68, 74, 0.7)',
+                color: '#fff',
+                fontSize: '11px',
+                fontWeight: 'bold',
+                padding: '2px 6px',
+                borderRadius: '10px',
+                backdropFilter: 'blur(2px)'
+              }}>{memories[2].id}</div>
             </div>
             <div className="polaroid-caption-main">{memories[2].title}</div>
             <div className="polaroid-caption-sub">{memories[2].subtitle}</div>
@@ -300,8 +336,20 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
             }}
           >
             <div className="polaroid-tape" />
-            <div className={`polaroid-inner-box ${memories[3].isGradient ? 'gradient' : 'solid'}`}>
-              <div className="polaroid-num-text">{memories[3].id}</div>
+            <div className="polaroid-inner-box" style={{ position: 'relative', overflow: 'hidden' }}>
+              <img src="/images/1.jpeg" alt={memories[3].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div style={{
+                position: 'absolute',
+                top: '8px',
+                right: '8px',
+                background: 'rgba(49, 68, 74, 0.7)',
+                color: '#fff',
+                fontSize: '11px',
+                fontWeight: 'bold',
+                padding: '2px 6px',
+                borderRadius: '10px',
+                backdropFilter: 'blur(2px)'
+              }}>{memories[3].id}</div>
             </div>
             <div className="polaroid-caption-main">{memories[3].title}</div>
             <div className="polaroid-caption-sub">{memories[3].subtitle}</div>
@@ -320,8 +368,20 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
             }}
           >
             <div className="polaroid-tape" />
-            <div className={`polaroid-inner-box ${memories[4].isGradient ? 'gradient' : 'solid'}`}>
-              <div className="polaroid-num-text">{memories[4].id}</div>
+            <div className="polaroid-inner-box" style={{ position: 'relative', overflow: 'hidden' }}>
+              <img src="/images/1.jpeg" alt={memories[4].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div style={{
+                position: 'absolute',
+                top: '8px',
+                right: '8px',
+                background: 'rgba(49, 68, 74, 0.7)',
+                color: '#fff',
+                fontSize: '11px',
+                fontWeight: 'bold',
+                padding: '2px 6px',
+                borderRadius: '10px',
+                backdropFilter: 'blur(2px)'
+              }}>{memories[4].id}</div>
             </div>
             <div className="polaroid-caption-main">{memories[4].title}</div>
             <div className="polaroid-caption-sub">{memories[4].subtitle}</div>

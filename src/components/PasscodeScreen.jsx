@@ -4,17 +4,17 @@ import { Delete } from 'lucide-react';
 
 // SVG Baby's Breath flowers component
 const BabysBreath = ({ style, scale = 1, rotate = 0 }) => (
-  <svg 
-    viewBox="0 0 150 300" 
-    fill="none" 
-    style={{ 
-      position: 'absolute', 
-      width: '190px', 
-      height: '380px', 
-      pointerEvents: 'none', 
+  <svg
+    viewBox="0 0 150 300"
+    fill="none"
+    style={{
+      position: 'absolute',
+      width: '190px',
+      height: '380px',
+      pointerEvents: 'none',
       zIndex: -1,
       transform: `scale(${scale}) rotate(${rotate}deg)`,
-      ...style 
+      ...style
     }}
   >
     {/* Main Stems */}
@@ -23,13 +23,13 @@ const BabysBreath = ({ style, scale = 1, rotate = 0 }) => (
     {/* Branching */}
     <path d="M55 200 C45 170 30 150 20 140" stroke="#8CA095" strokeWidth="1.2" />
     <path d="M85 210 C95 180 110 160 120 150" stroke="#8CA095" strokeWidth="1.2" />
-    
+
     <path d="M43 150 C33 130 20 120 10 115" stroke="#8CA095" strokeWidth="1.0" />
     <path d="M98 160 C108 140 122 130 132 125" stroke="#8CA095" strokeWidth="1.0" />
-    
+
     <path d="M33 110 C27 90 15 80 8 75" stroke="#8CA095" strokeWidth="0.8" />
     <path d="M108 115 C115 95 127 85 135 80" stroke="#8CA095" strokeWidth="0.8" />
-    
+
     {/* Flower Buds */}
     <circle cx="25" cy="90" r="4" fill="#FFFFFF" />
     <circle cx="25" cy="90" r="1.2" fill="#E8D26C" />
@@ -38,7 +38,7 @@ const BabysBreath = ({ style, scale = 1, rotate = 0 }) => (
     <circle cx="10" cy="115" r="3.5" fill="#FFFFFF" />
     <circle cx="8" cy="75" r="4" fill="#FFFFFF" />
     <circle cx="8" cy="75" r="1.2" fill="#E8D26C" />
-    
+
     <circle cx="115" cy="100" r="4" fill="#FFFFFF" />
     <circle cx="115" cy="100" r="1.2" fill="#E8D26C" />
     <circle cx="120" cy="150" r="4" fill="#FFFFFF" />
@@ -57,20 +57,20 @@ const BabysBreath = ({ style, scale = 1, rotate = 0 }) => (
 
 // Heart Wire Clip SVG
 const HeartWireClip = () => (
-  <svg 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="var(--mint-blue)" 
-    strokeWidth="1.6" 
-    style={{ 
-      position: 'absolute', 
-      top: '-24px', 
-      left: 'calc(50% - 15px)', 
-      width: '30px', 
-      height: '30px', 
-      zIndex: 10, 
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="var(--mint-blue)"
+    strokeWidth="1.6"
+    style={{
+      position: 'absolute',
+      top: '-24px',
+      left: 'calc(50% - 15px)',
+      width: '30px',
+      height: '30px',
+      zIndex: 10,
       transform: 'rotate(-5deg)',
-      filter: 'drop-shadow(0 1.5px 2px rgba(49, 68, 74, 0.15))' 
+      filter: 'drop-shadow(0 1.5px 2px rgba(49, 68, 74, 0.15))'
     }}
   >
     <path d="M12 5 C10.5 3 8 3.5 6.5 5 C5 6.5 5 9 6.5 10.5 L12 16 L17.5 10.5 C19 9 19 6.5 17.5 5 C16 3.5 13.5 3 12 5 Z" />
@@ -151,26 +151,26 @@ const ScallopedTag = () => (
 
 // Keypad card corner ribbon bow with daisy
 const RibbonBow = () => (
-  <svg 
-    viewBox="0 0 100 80" 
-    style={{ 
-      position: 'absolute', 
-      top: '-18px', 
-      right: '-18px', 
-      width: '85px', 
-      height: '68px', 
+  <svg
+    viewBox="0 0 100 80"
+    style={{
+      position: 'absolute',
+      top: '-18px',
+      right: '-18px',
+      width: '85px',
+      height: '68px',
       zIndex: 15,
-      filter: 'drop-shadow(0 2px 4px rgba(49, 68, 74, 0.12))' 
+      filter: 'drop-shadow(0 2px 4px rgba(49, 68, 74, 0.12))'
     }}
   >
     {/* Bow Loops */}
     <path d="M50 40 C32 12 12 12 12 32 C12 52 32 45 50 40" fill="rgba(207, 232, 225, 0.95)" stroke="var(--mint-blue)" strokeWidth="1" />
     <path d="M50 40 C68 12 88 12 88 32 C88 52 68 45 50 40" fill="rgba(207, 232, 225, 0.95)" stroke="var(--mint-blue)" strokeWidth="1" />
-    
+
     {/* Ribbon tails */}
     <path d="M50 40 C46 55 32 75 14 78" fill="none" stroke="rgba(207, 232, 225, 0.95)" strokeWidth="5.5" strokeLinecap="round" />
     <path d="M50 40 C46 55 32 75 14 78" fill="none" stroke="var(--mint-blue)" strokeWidth="1" strokeLinecap="round" />
-    
+
     <path d="M50 40 C54 55 68 75 86 78" fill="none" stroke="rgba(207, 232, 225, 0.95)" strokeWidth="5.5" strokeLinecap="round" />
     <path d="M50 40 C54 55 68 75 86 78" fill="none" stroke="var(--mint-blue)" strokeWidth="1" strokeLinecap="round" />
 
@@ -188,32 +188,32 @@ const RibbonBow = () => (
 
 // Flowy satin ribbon tail wrapping around
 const FlowingRibbon = () => (
-  <svg 
-    viewBox="0 0 400 100" 
-    style={{ 
-      position: 'absolute', 
-      bottom: '-35px', 
-      left: '-20px', 
-      width: '420px', 
-      height: '105px', 
+  <svg
+    viewBox="0 0 400 100"
+    style={{
+      position: 'absolute',
+      bottom: '-35px',
+      left: '-20px',
+      width: '420px',
+      height: '105px',
       zIndex: -2,
       pointerEvents: 'none',
       filter: 'drop-shadow(0 4px 8px rgba(49, 68, 74, 0.08))'
     }}
   >
-    <path 
-      d="M10 60 C80 35 180 115 280 55 C330 25 365 40 390 60" 
-      fill="none" 
-      stroke="rgba(207, 232, 225, 0.55)" 
-      strokeWidth="24" 
-      strokeLinecap="round" 
+    <path
+      d="M10 60 C80 35 180 115 280 55 C330 25 365 40 390 60"
+      fill="none"
+      stroke="rgba(207, 232, 225, 0.55)"
+      strokeWidth="24"
+      strokeLinecap="round"
     />
-    <path 
-      d="M10 60 C80 35 180 115 280 55 C330 25 365 40 390 60" 
-      fill="none" 
-      stroke="rgba(111, 184, 184, 0.2)" 
-      strokeWidth="25" 
-      strokeLinecap="round" 
+    <path
+      d="M10 60 C80 35 180 115 280 55 C330 25 365 40 390 60"
+      fill="none"
+      stroke="rgba(111, 184, 184, 0.2)"
+      strokeWidth="25"
+      strokeLinecap="round"
       strokeDasharray="1 16"
     />
   </svg>
@@ -221,15 +221,15 @@ const FlowingRibbon = () => (
 
 // Heart indicator icon
 const HeartIcon = ({ filled }) => (
-  <svg 
-    viewBox="0 0 24 24" 
-    width="20" 
-    height="20" 
-    fill={filled ? "var(--mint-blue)" : "none"} 
-    stroke="var(--mint-blue)" 
+  <svg
+    viewBox="0 0 24 24"
+    width="20"
+    height="20"
+    fill={filled ? "var(--mint-blue)" : "none"}
+    stroke="var(--mint-blue)"
     strokeWidth="2"
-    style={{ 
-      margin: '0 4px', 
+    style={{
+      margin: '0 4px',
       transition: 'all 0.3s ease',
       filter: filled ? 'drop-shadow(0 0 4px rgba(111,184,184,0.4))' : 'none'
     }}
@@ -292,7 +292,7 @@ export default function PasscodeScreen({ onSuccess }) {
 
       oscillator.connect(gainNode);
       gainNode.connect(audioCtx.destination);
-      
+
       oscillator.start();
       oscillator.stop(audioCtx.currentTime + duration);
     } catch (e) {
@@ -561,13 +561,19 @@ export default function PasscodeScreen({ onSuccess }) {
           {/* Grid pattern Washi tape */}
           <div className="washi-tape" />
 
-          <div className="polaroid-img-container">
-            <div className="polaroid-inner-card">
-              <div className="polaroid-inner-letter">B</div>
-              <div className="polaroid-inner-sub">for you</div>
-            </div>
+          <div className="polaroid-img-container" style={{ aspectRatio: 'auto', height: '520px' }}>
+            <img
+              src="/images/2.jpeg"
+              alt="Birthday Surprise"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                borderRadius: '4px'
+              }}
+            />
           </div>
-          
+
           {/* Scalloped tag sticker attached to polaroid */}
           <ScallopedTag />
 
