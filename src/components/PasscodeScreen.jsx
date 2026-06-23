@@ -84,10 +84,10 @@ const ScallopedTag = () => (
     <style>{`
       .scalloped-tag-wrapper {
         position: absolute;
-        bottom: -25px;
-        left: -35px;
-        width: 105px;
-        height: 105px;
+        bottom: -20px;
+        left: -25px;
+        width: 90px;
+        height: 90px;
         z-index: 10;
         transform: rotate(-12deg);
         filter: drop-shadow(0 4px 10px rgba(49, 68, 74, 0.08));
@@ -97,12 +97,12 @@ const ScallopedTag = () => (
         height: 100%;
         background-color: var(--white);
         border-radius: 50%;
-        border: 2.2px dashed var(--mint-green);
+        border: 2px dashed var(--mint-green);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 8px;
+        padding: 6px;
         text-align: center;
         position: relative;
         box-sizing: border-box;
@@ -110,28 +110,28 @@ const ScallopedTag = () => (
       .scalloped-badge::before {
         content: '';
         position: absolute;
-        inset: -4px;
+        inset: -3px;
         border-radius: 50%;
-        border: 3.5px dotted rgba(207, 232, 225, 0.7);
+        border: 3px dotted rgba(207, 232, 225, 0.7);
       }
       .tag-text {
         font-family: var(--font-hand);
-        font-size: 14px;
+        font-size: 12px;
         line-height: 1.15;
         color: var(--text);
         font-weight: bold;
       }
       .tag-heart {
-        font-size: 10px;
+        font-size: 8px;
         color: var(--mint-blue);
-        margin-top: 3px;
+        margin-top: 2px;
       }
       .tag-bow {
         position: absolute;
-        top: -12px;
-        left: 30px;
-        width: 44px;
-        height: 18px;
+        top: -10px;
+        left: 25px;
+        width: 38px;
+        height: 16px;
         color: var(--mint-blue);
       }
     `}</style>
@@ -327,34 +327,34 @@ export default function PasscodeScreen({ onSuccess }) {
           position: relative;
         }
 
-        /* Scaled up soft envelope backing behind polaroid */
+        /* Soft envelope backing behind polaroid */
         .polaroid-envelope-bg {
           position: absolute;
-          width: 490px; /* Even wider Polaroid backing */
-          height: 580px; /* Longer Polaroid backing */
+          width: 370px; /* Reduced Polaroid backing */
+          height: 460px; /* Reduced Polaroid backing */
           background-color: rgba(176, 215, 215, 0.7);
           backdrop-filter: blur(2px);
           border: 1px solid rgba(255,255,255,0.5);
           border-radius: 12px;
-          transform: rotate(-10deg) translate(-25px, 20px);
+          transform: rotate(-10deg) translate(-20px, 15px);
           z-index: -1;
           box-shadow: -12px 16px 40px rgba(49, 68, 74, 0.08);
         }
 
         .polaroid-card-box {
-          width: 480px; /* Even wider Polaroid card */
+          width: 360px; /* Reduced Polaroid card */
           position: relative;
           z-index: 2;
         }
 
-        /* Custom washi tape grid effect scaled up */
+        /* Custom washi tape grid effect */
         .washi-tape {
           position: absolute;
-          top: -16px;
+          top: -14px;
           left: 50%;
           transform: translateX(-50%) rotate(-1deg);
-          width: 160px; /* Wider tape */
-          height: 32px;
+          width: 120px; /* Reduced tape width */
+          height: 26px; /* Reduced tape height */
           background-color: rgba(207, 232, 225, 0.85);
           background-image: 
             repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(111, 184, 184, 0.2) 5px, rgba(111, 184, 184, 0.2) 10px),
@@ -366,16 +366,14 @@ export default function PasscodeScreen({ onSuccess }) {
           z-index: 6;
         }
 
-        .polaroid-inner-card {
+        .polaroid-card-box .polaroid-img-container {
           width: 100%;
-          height: 520px; /* Longer Polaroid photo aspect ratio */
-          background: linear-gradient(135deg, #CFE8E1 0%, #E8F2EF 100%);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          border-radius: 4px;
-          border: 1px solid rgba(111, 184, 184, 0.1);
+          height: 380px; /* Reduced Polaroid height */
+          aspect-ratio: auto;
+        }
+
+        .polaroid-card-box .polaroid-caption {
+          font-size: 30px; /* Reduced font size */
         }
 
         .polaroid-inner-letter {
@@ -520,11 +518,15 @@ export default function PasscodeScreen({ onSuccess }) {
           }
 
           .polaroid-card-box {
-            width: 360px;
+            width: 310px; /* Smaller polaroid on mobile */
           }
           
-          .polaroid-inner-card {
-            height: 330px;
+          .polaroid-card-box .polaroid-img-container {
+            height: 320px;
+          }
+
+          .polaroid-card-box .polaroid-caption {
+            font-size: 26px;
           }
 
           .keypad-container {
@@ -536,7 +538,7 @@ export default function PasscodeScreen({ onSuccess }) {
 
       {/* Decorative Baby's Breath Flowers placed behind cards */}
       <BabysBreath style={{ left: '-50px', top: '-110px' }} scale={0.9} rotate={-15} />
-      <BabysBreath style={{ left: '350px', top: '-130px' }} scale={0.8} rotate={35} />
+      <BabysBreath style={{ left: '270px', top: '-130px' }} scale={0.8} rotate={35} />
       <BabysBreath style={{ right: '-50px', bottom: '-50px' }} scale={0.9} rotate={160} />
 
       {/* Polaroid Hanging Photo Section */}
@@ -561,7 +563,7 @@ export default function PasscodeScreen({ onSuccess }) {
           {/* Grid pattern Washi tape */}
           <div className="washi-tape" />
 
-          <div className="polaroid-img-container" style={{ aspectRatio: 'auto', height: '520px' }}>
+          <div className="polaroid-img-container">
             <img
               src="/images/2.jpeg"
               alt="Birthday Surprise"
@@ -577,7 +579,7 @@ export default function PasscodeScreen({ onSuccess }) {
           {/* Scalloped tag sticker attached to polaroid */}
           <ScallopedTag />
 
-          <div className="polaroid-caption" style={{ fontSize: '40px' }}>
+          <div className="polaroid-caption">
             Happy Birthday <span style={{ color: 'var(--mint-blue)' }}>🩵</span>
           </div>
         </motion.div>
