@@ -410,21 +410,30 @@ export default function LetterBox({ onBack, onComplete }) {
           >
             {/* Ruled lines and message */}
             <div className="letter-content">
-              <div className="letter-salutation">my dearest,</div>
+              <div className="letter-salutation">To my Dearest Megh,</div>
               <div className="letter-paragraph">
-                Today the world spins a little softer because it's your day. I wanted to tuck this letter into a quiet corner of the internet so you could find it like a pressed flower in an old book.
+                I’m sorry I’m late.<br/>
+                I forgot the date, but I could never forget you.
               </div>
               <div className="letter-paragraph">
-                Thank you for your laughter – the kind that makes ordinary afternoons feel like something worth remembering. Thank you for every late night conversation, every silly voice note, every time you've made me feel seen.
+                Our friendship isn’t about daily calls or texts.<br/>
+                It was made in our 12th standard days — sharing lunch, secrets, and endless laughs in school.<br/>
+                Those moments still feel fresh, even after all this time.
               </div>
               <div className="letter-paragraph">
-                I hope this year brings you slow mornings, warm tea, plans that don't fall through, and the kind of love that doesn't ask you to shrink. You deserve all of it, and then some.
+                We don’t talk every day, but when we do, it feels like nothing has changed. That’s how strong our bond is.
               </div>
               <div className="letter-paragraph">
-                Happy birthday, lovely soul. The world is luckier with you in it.
+                So today, even though I’m late, I’m celebrating you.<br/>
+                The girl who stood by me in school, and the amazing woman you are now.<br/>
+                I wish this year gives you all the love and happiness.
+              </div>
+              <div className="letter-paragraph" style={{ fontWeight: 'bold' }}>
+                Belated birthday wishes Meghoose🩵
               </div>
               <div className="letter-signoff">
-                — always, me 🩵
+                With love,<br />
+                <span className="signoff-name" style={{ fontFamily: 'var(--font-hand)', fontSize: '24px' }}>Your Anjala</span>
               </div>
             </div>
 
