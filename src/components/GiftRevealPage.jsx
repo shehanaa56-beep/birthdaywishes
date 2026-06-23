@@ -4,41 +4,41 @@ import { motion } from 'framer-motion';
 // Cute Daisy SVG matching the aesthetic
 const DaisyIcon = ({ className }) => (
   <svg className={className} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="20" r="16" fill="#FFFFFF"/>
-    <circle cx="50" cy="80" r="16" fill="#FFFFFF"/>
-    <circle cx="20" cy="50" r="16" fill="#FFFFFF"/>
-    <circle cx="80" cy="50" r="16" fill="#FFFFFF"/>
-    <circle cx="30" cy="30" r="16" fill="#FFFFFF"/>
-    <circle cx="70" cy="70" r="16" fill="#FFFFFF"/>
-    <circle cx="70" cy="30" r="16" fill="#FFFFFF"/>
-    <circle cx="30" cy="70" r="16" fill="#FFFFFF"/>
-    <circle cx="50" cy="50" r="14" fill="#E6C855"/>
+    <circle cx="50" cy="20" r="16" fill="#FFFFFF" />
+    <circle cx="50" cy="80" r="16" fill="#FFFFFF" />
+    <circle cx="20" cy="50" r="16" fill="#FFFFFF" />
+    <circle cx="80" cy="50" r="16" fill="#FFFFFF" />
+    <circle cx="30" cy="30" r="16" fill="#FFFFFF" />
+    <circle cx="70" cy="70" r="16" fill="#FFFFFF" />
+    <circle cx="70" cy="30" r="16" fill="#FFFFFF" />
+    <circle cx="30" cy="70" r="16" fill="#FFFFFF" />
+    <circle cx="50" cy="50" r="14" fill="#E6C855" />
   </svg>
 );
 
 // Cute Cloud SVG with face
 const CloudIcon = ({ className }) => (
   <svg className={className} viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M25 60C11.1929 60 0 48.8071 0 35C0 22.3838 9.33644 11.9442 21.5036 10.2338C24.4719 4.14811 30.686 0 38 0C46.6133 0 54.0041 5.2393 56.8837 12.8315C59.0832 11.0256 61.9167 10 65 10C72.0308 10 77.9255 14.9922 79.5242 21.5796C80.3174 21.3967 81.1448 21.3 82 21.3C91.9411 21.3 100 29.3589 100 39.3C100 49.2411 91.9411 57.3 82 57.3H25Z" fill="#FFFFFF"/>
+    <path d="M25 60C11.1929 60 0 48.8071 0 35C0 22.3838 9.33644 11.9442 21.5036 10.2338C24.4719 4.14811 30.686 0 38 0C46.6133 0 54.0041 5.2393 56.8837 12.8315C59.0832 11.0256 61.9167 10 65 10C72.0308 10 77.9255 14.9922 79.5242 21.5796C80.3174 21.3967 81.1448 21.3 82 21.3C91.9411 21.3 100 29.3589 100 39.3C100 49.2411 91.9411 57.3 82 57.3H25Z" fill="#FFFFFF" />
     {/* Eyes */}
-    <circle cx="38" cy="35" r="3" fill="#31444A"/>
-    <circle cx="62" cy="35" r="3" fill="#31444A"/>
+    <circle cx="38" cy="35" r="3" fill="#31444A" />
+    <circle cx="62" cy="35" r="3" fill="#31444A" />
     {/* Blush */}
-    <ellipse cx="26" cy="40" rx="5" ry="3" fill="#FFC2C2" opacity="0.8"/>
-    <ellipse cx="74" cy="40" rx="5" ry="3" fill="#FFC2C2" opacity="0.8"/>
+    <ellipse cx="26" cy="40" rx="5" ry="3" fill="#FFC2C2" opacity="0.8" />
+    <ellipse cx="74" cy="40" rx="5" ry="3" fill="#FFC2C2" opacity="0.8" />
     {/* Smile */}
-    <path d="M46 38C46 41 48 43 50 43C52 43 54 41 54 38" stroke="#31444A" strokeWidth="2.5" strokeLinecap="round"/>
+    <path d="M46 38C46 41 48 43 50 43C52 43 54 41 54 38" stroke="#31444A" strokeWidth="2.5" strokeLinecap="round" />
   </svg>
 );
 
 // Blue/Mint Ribbon Bow SVG (using theme colors)
 const BowIcon = ({ className }) => (
   <svg className={className} viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M40 30C20 10 5 15 5 40C5 65 25 50 45 40C45 40 40 30 40 30Z" fill="#CFE8E1" stroke="#5AA1A1" strokeWidth="2.5"/>
-    <path d="M60 30C80 10 95 15 95 40C95 65 75 50 55 40C55 40 60 30 60 30Z" fill="#CFE8E1" stroke="#5AA1A1" strokeWidth="2.5"/>
-    <circle cx="50" cy="35" r="8" fill="#6FB8B8" stroke="#5AA1A1" strokeWidth="2.5"/>
-    <path d="M45 40C35 60 25 80 25 80L35 80L50 50L45 40Z" fill="#6FB8B8" stroke="#5AA1A1" strokeWidth="2.5"/>
-    <path d="M55 40C65 60 75 80 75 80L65 80L50 50L55 40Z" fill="#6FB8B8" stroke="#5AA1A1" strokeWidth="2.5"/>
+    <path d="M40 30C20 10 5 15 5 40C5 65 25 50 45 40C45 40 40 30 40 30Z" fill="#CFE8E1" stroke="#5AA1A1" strokeWidth="2.5" />
+    <path d="M60 30C80 10 95 15 95 40C95 65 75 50 55 40C55 40 60 30 60 30Z" fill="#CFE8E1" stroke="#5AA1A1" strokeWidth="2.5" />
+    <circle cx="50" cy="35" r="8" fill="#6FB8B8" stroke="#5AA1A1" strokeWidth="2.5" />
+    <path d="M45 40C35 60 25 80 25 80L35 80L50 50L45 40Z" fill="#6FB8B8" stroke="#5AA1A1" strokeWidth="2.5" />
+    <path d="M55 40C65 60 75 80 75 80L65 80L50 50L55 40Z" fill="#6FB8B8" stroke="#5AA1A1" strokeWidth="2.5" />
   </svg>
 );
 
@@ -250,7 +250,7 @@ export default function GiftRevealPage({ onNext }) {
       `}</style>
 
       {/* Header */}
-      <motion.div 
+      <motion.div
         className="reveal-header"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -275,7 +275,7 @@ export default function GiftRevealPage({ onNext }) {
       </motion.div>
 
       {/* Center Polaroid */}
-      <motion.div 
+      <motion.div
         className="polaroid-container"
         initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
         animate={{ opacity: 1, scale: 1, rotate: -2 }}
@@ -286,7 +286,7 @@ export default function GiftRevealPage({ onNext }) {
         <div className="polaroid-text">love you</div>
 
         {/* Next Button Overlaying the Polaroid */}
-        <motion.div 
+        <motion.div
           className="next-btn-wrapper"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
