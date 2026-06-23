@@ -217,7 +217,7 @@ export default function App() {
       {/* Background Audio */}
       <audio
         ref={audioRef}
-        src="/m.mp3"
+        src="/music/m.mp3"
         loop
         muted={isMuted}
       />
