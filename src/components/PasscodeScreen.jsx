@@ -219,7 +219,7 @@ export default function PasscodeScreen({ onSuccess }) {
   const [code, setCode] = useState('');
   const [isError, setIsError] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const correctCode = '0418';
+  const correctCode = '2017';
 
   const handleKeyPress = (num) => {
     if (isSuccess) return;
@@ -751,7 +751,7 @@ export default function PasscodeScreen({ onSuccess }) {
           {/* Dash-bordered Hint Box */}
           <div className="dashed-hint-box">
             <span>🩵</span>
-            hint: a date that started everything - 04 / 18
+            hint: a year that started everything - 2017
             <span>🩵</span>
           </div>
         </motion.div>

@@ -22,12 +22,8 @@ export default function App() {
 
   // Load persistent state from localStorage
   useEffect(() => {
-    const isUnlocked = localStorage.getItem('birthday_journey_unlocked') === 'true';
     const savedCompletion = localStorage.getItem('birthday_journey_boxes');
     
-    if (isUnlocked) {
-      setView('dashboard');
-    }
     if (savedCompletion) {
       try {
         setCompletedBoxes(JSON.parse(savedCompletion));
@@ -49,7 +45,6 @@ export default function App() {
 
   // Handle successful passcode entry
   const handlePasscodeSuccess = () => {
-    localStorage.setItem('birthday_journey_unlocked', 'true');
     setView('dashboard');
     // Start music on first interaction if possible
     if (audioRef.current) {
