@@ -2,6 +2,74 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
+// Keypad card corner ribbon bow with daisy
+const RibbonBow = ({ style }) => (
+  <svg
+    viewBox="0 0 100 80"
+    style={{
+      position: 'absolute',
+      width: '85px',
+      height: '68px',
+      zIndex: 15,
+      filter: 'drop-shadow(0 2px 4px rgba(49, 68, 74, 0.12))',
+      ...style
+    }}
+  >
+    {/* Bow Loops */}
+    <path d="M50 40 C32 12 12 12 12 32 C12 52 32 45 50 40" fill="rgba(207, 232, 225, 0.95)" stroke="var(--mint-blue)" strokeWidth="1" />
+    <path d="M50 40 C68 12 88 12 88 32 C88 52 68 45 50 40" fill="rgba(207, 232, 225, 0.95)" stroke="var(--mint-blue)" strokeWidth="1" />
+
+    {/* Ribbon tails */}
+    <path d="M50 40 C46 55 32 75 14 78" fill="none" stroke="rgba(207, 232, 225, 0.95)" strokeWidth="5.5" strokeLinecap="round" />
+    <path d="M50 40 C46 55 32 75 14 78" fill="none" stroke="var(--mint-blue)" strokeWidth="1" strokeLinecap="round" />
+
+    <path d="M50 40 C54 55 68 75 86 78" fill="none" stroke="rgba(207, 232, 225, 0.95)" strokeWidth="5.5" strokeLinecap="round" />
+    <path d="M50 40 C54 55 68 75 86 78" fill="none" stroke="var(--mint-blue)" strokeWidth="1" strokeLinecap="round" />
+
+    {/* Daisy in Center */}
+    <circle cx="50" cy="40" r="7" fill="var(--white)" stroke="var(--mint-blue)" strokeWidth="1" />
+    <circle cx="50" cy="40" r="2.8" fill="#EAD575" />
+    {Array.from({ length: 8 }).map((_, i) => {
+      const angle = (i * 45 * Math.PI) / 180;
+      const px = 50 + Math.cos(angle) * 5.8;
+      const py = 40 + Math.sin(angle) * 5.8;
+      return <circle key={i} cx={px} cy={py} r="2.2" fill="var(--white)" />;
+    })}
+  </svg>
+);
+
+// Flowy satin ribbon tail wrapping around
+const FlowingRibbon = ({ style }) => (
+  <svg
+    viewBox="0 0 400 100"
+    style={{
+      position: 'absolute',
+      width: '420px',
+      height: '105px',
+      zIndex: -2,
+      pointerEvents: 'none',
+      filter: 'drop-shadow(0 4px 8px rgba(49, 68, 74, 0.08))',
+      ...style
+    }}
+  >
+    <path
+      d="M10 60 C80 35 180 115 280 55 C330 25 365 40 390 60"
+      fill="none"
+      stroke="rgba(207, 232, 225, 0.55)"
+      strokeWidth="24"
+      strokeLinecap="round"
+    />
+    <path
+      d="M10 60 C80 35 180 115 280 55 C330 25 365 40 390 60"
+      fill="none"
+      stroke="rgba(111, 184, 184, 0.2)"
+      strokeWidth="25"
+      strokeLinecap="round"
+      strokeDasharray="1 16"
+    />
+  </svg>
+);
+
 export default function MemoryLaneBox({ onBack, onComplete }) {
   const memories = [
     {
@@ -238,7 +306,8 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
       </button>
 
       {/* Header */}
-      <div className="memory-header">
+      <div className="memory-header" style={{ position: 'relative' }}>
+        <FlowingRibbon style={{ top: '10px', left: '50%', transform: 'translateX(-50%)', opacity: 0.7 }} />
         <div className="memory-intro-hint">✦ box two ✦</div>
         <h1 className="memory-title">Memory Lane</h1>
         <p className="memory-desc">
@@ -249,7 +318,7 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
       {/* Grid containing Polaroids and arrows */}
       <div className="scrapbook-grid">
         {/* Row 1 Polaroids */}
-        <div className="grid-cell">
+        <div className="grid-cell" style={{ position: 'relative' }}>
           <motion.div
             className="polaroid memory-polaroid"
             style={{ rotate: memories[0].rotation }}
@@ -260,9 +329,10 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
               boxShadow: '0 20px 40px rgba(49, 68, 74, 0.18)',
             }}
           >
+            <RibbonBow style={{ top: '-25px', right: '-25px', transform: 'rotate(15deg) scale(0.85)' }} />
             <div className="polaroid-tape" />
             <div className="polaroid-inner-box" style={{ position: 'relative', overflow: 'hidden' }}>
-              <img src="/images/1.jpeg" alt={memories[0].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src="/images/m2.jpeg" alt={memories[0].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               <div style={{
                 position: 'absolute',
                 top: '8px',
@@ -294,7 +364,7 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
           >
             <div className="polaroid-tape" />
             <div className="polaroid-inner-box" style={{ position: 'relative', overflow: 'hidden' }}>
-              <img src="/images/1.jpeg" alt={memories[1].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src="/images/m3.jpeg" alt={memories[1].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               <div style={{
                 position: 'absolute',
                 top: '8px',
@@ -326,7 +396,7 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
           >
             <div className="polaroid-tape" />
             <div className="polaroid-inner-box" style={{ position: 'relative', overflow: 'hidden' }}>
-              <img src="/images/1.jpeg" alt={memories[2].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src="/images/m4.jpeg" alt={memories[2].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               <div style={{
                 position: 'absolute',
                 top: '8px',
@@ -357,7 +427,7 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
         </div>
 
         {/* Row 3 Polaroids (Bottom Row) */}
-        <div className="grid-cell">
+        <div className="grid-cell" style={{ position: 'relative' }}>
           <motion.div
             className="polaroid memory-polaroid"
             style={{ rotate: memories[3].rotation }}
@@ -368,9 +438,10 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
               boxShadow: '0 20px 40px rgba(49, 68, 74, 0.18)',
             }}
           >
+            <RibbonBow style={{ bottom: '-15px', left: '-20px', top: 'auto', right: 'auto', transform: 'rotate(-25deg) scale(0.85)' }} />
             <div className="polaroid-tape" />
             <div className="polaroid-inner-box" style={{ position: 'relative', overflow: 'hidden' }}>
-              <img src="/images/1.jpeg" alt={memories[3].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src="/images/m5.jpeg" alt={memories[3].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               <div style={{
                 position: 'absolute',
                 top: '8px',
@@ -402,7 +473,7 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
           >
             <div className="polaroid-tape" />
             <div className="polaroid-inner-box" style={{ position: 'relative', overflow: 'hidden' }}>
-              <img src="/images/1.jpeg" alt={memories[4].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src="/images/m1.jpeg" alt={memories[4].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               <div style={{
                 position: 'absolute',
                 top: '8px',

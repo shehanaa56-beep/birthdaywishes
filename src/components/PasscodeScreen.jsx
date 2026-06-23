@@ -645,7 +645,7 @@ export default function PasscodeScreen({ onSuccess }) {
 
           <div className="polaroid-img-container">
             <img
-              src="/images/2.jpeg"
+              src="/images/m1.jpeg"
               alt="Birthday Surprise"
               style={{
                 width: '100%',
