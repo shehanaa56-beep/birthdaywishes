@@ -180,6 +180,27 @@ export default function App() {
       {/* Georgette fabric texture background */}
       <div className="georgette-bg"></div>
 
+      {/* Wave Background Divider (Mint Blue upper-wave with soft shadow) */}
+      <div className="bg-wave-wrapper">
+        <svg viewBox="0 0 1440 800" preserveAspectRatio="none" className="bg-wave-svg">
+          <defs>
+            <filter id="wave-shadow" x="-10%" y="-10%" width="120%" height="140%">
+              <feDropShadow dx="0" dy="12" stdDeviation="20" floodOpacity="0.12" floodColor="#1E3E3E" />
+            </filter>
+            <linearGradient id="wave-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#3E9B9B" />
+              <stop offset="100%" stopColor="#6FB8B8" />
+            </linearGradient>
+          </defs>
+          <path 
+            d="M 0,0 L 1440,0 L 1440,320 C 1080,440 920,240 580,360 C 290,480 150,380 0,400 Z" 
+            fill="url(#wave-grad)" 
+            filter="url(#wave-shadow)"
+            style={{ opacity: 0.85 }}
+          />
+        </svg>
+      </div>
+
       {/* Floating particles (butterflies, sparkles, petals) */}
       <BackgroundParticles count={25} />
 

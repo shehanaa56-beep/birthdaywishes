@@ -18,19 +18,19 @@ const BabysBreath = ({ style, scale = 1, rotate = 0 }) => (
     }}
   >
     {/* Main Stems */}
-    <path d="M75 280 C70 190 40 130 25 90" stroke="#9BB2A7" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M75 280 C78 200 95 140 115 100" stroke="#9BB2A7" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M75 280 C70 190 40 130 25 90" stroke="#8CA095" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M75 280 C78 200 95 140 115 100" stroke="#8CA095" strokeWidth="1.5" strokeLinecap="round" />
     {/* Branching */}
-    <path d="M55 200 C45 170 30 150 20 140" stroke="#9BB2A7" strokeWidth="1.2" />
-    <path d="M85 210 C95 180 110 160 120 150" stroke="#9BB2A7" strokeWidth="1.2" />
+    <path d="M55 200 C45 170 30 150 20 140" stroke="#8CA095" strokeWidth="1.2" />
+    <path d="M85 210 C95 180 110 160 120 150" stroke="#8CA095" strokeWidth="1.2" />
     
-    <path d="M43 150 C33 130 20 120 10 115" stroke="#9BB2A7" strokeWidth="1.0" />
-    <path d="M98 160 C108 140 122 130 132 125" stroke="#9BB2A7" strokeWidth="1.0" />
+    <path d="M43 150 C33 130 20 120 10 115" stroke="#8CA095" strokeWidth="1.0" />
+    <path d="M98 160 C108 140 122 130 132 125" stroke="#8CA095" strokeWidth="1.0" />
     
-    <path d="M33 110 C27 90 15 80 8 75" stroke="#9BB2A7" strokeWidth="0.8" />
-    <path d="M108 115 C115 95 127 85 135 80" stroke="#9BB2A7" strokeWidth="0.8" />
+    <path d="M33 110 C27 90 15 80 8 75" stroke="#8CA095" strokeWidth="0.8" />
+    <path d="M108 115 C115 95 127 85 135 80" stroke="#8CA095" strokeWidth="0.8" />
     
-    {/* Flower Buds (Small white circles with tiny yellow cores) */}
+    {/* Flower Buds */}
     <circle cx="25" cy="90" r="4" fill="#FFFFFF" />
     <circle cx="25" cy="90" r="1.2" fill="#E8D26C" />
     <circle cx="20" cy="140" r="4" fill="#FFFFFF" />
@@ -52,8 +52,6 @@ const BabysBreath = ({ style, scale = 1, rotate = 0 }) => (
     <circle cx="95" cy="180" r="2.5" fill="#FFFFFF" />
     <circle cx="38" cy="130" r="2.5" fill="#FFFFFF" />
     <circle cx="104" cy="135" r="2.5" fill="#FFFFFF" />
-    <circle cx="28" cy="105" r="2.5" fill="#FFFFFF" />
-    <circle cx="122" cy="110" r="2.5" fill="#FFFFFF" />
   </svg>
 );
 
@@ -72,10 +70,9 @@ const HeartWireClip = () => (
       height: '30px', 
       zIndex: 10, 
       transform: 'rotate(-5deg)',
-      filter: 'drop-shadow(0 1.5px 2px rgba(49, 68, 74, 0.2))' 
+      filter: 'drop-shadow(0 1.5px 2px rgba(49, 68, 74, 0.15))' 
     }}
   >
-    {/* Heart shaped wire clip loop path */}
     <path d="M12 5 C10.5 3 8 3.5 6.5 5 C5 6.5 5 9 6.5 10.5 L12 16 L17.5 10.5 C19 9 19 6.5 17.5 5 C16 3.5 13.5 3 12 5 Z" />
     <path d="M12 7 C11.5 5.8 9.5 6.2 8.5 7.2 C7.5 8.2 7.5 9.8 8.5 10.8 L12 14.3 L15.5 10.8 C16.5 9.8 16.5 8.2 15.5 7.2 C14.5 6.2 12.5 5.8 12 7 Z" />
   </svg>
@@ -87,13 +84,13 @@ const ScallopedTag = () => (
     <style>{`
       .scalloped-tag-wrapper {
         position: absolute;
-        bottom: -22px;
-        left: -32px;
-        width: 100px;
-        height: 100px;
+        bottom: -25px;
+        left: -35px;
+        width: 105px;
+        height: 105px;
         z-index: 10;
         transform: rotate(-12deg);
-        filter: drop-shadow(0 4px 10px rgba(49, 68, 74, 0.1));
+        filter: drop-shadow(0 4px 10px rgba(49, 68, 74, 0.08));
       }
       .scalloped-badge {
         width: 100%;
@@ -119,7 +116,7 @@ const ScallopedTag = () => (
       }
       .tag-text {
         font-family: var(--font-hand);
-        font-size: 13.5px;
+        font-size: 14px;
         line-height: 1.15;
         color: var(--text);
         font-weight: bold;
@@ -132,13 +129,12 @@ const ScallopedTag = () => (
       .tag-bow {
         position: absolute;
         top: -12px;
-        left: 28px;
+        left: 30px;
         width: 44px;
         height: 18px;
         color: var(--mint-blue);
       }
     `}</style>
-    {/* Thin string bow */}
     <svg className="tag-bow" viewBox="0 0 24 10" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M12 5 C8 1 4 1 4 4 C4 7 8 5 12 5" />
       <path d="M12 5 C16 1 20 1 20 4 C20 7 16 5 12 5" />
@@ -164,18 +160,18 @@ const RibbonBow = () => (
       width: '85px', 
       height: '68px', 
       zIndex: 15,
-      filter: 'drop-shadow(0 3px 5px rgba(49, 68, 74, 0.15))' 
+      filter: 'drop-shadow(0 2px 4px rgba(49, 68, 74, 0.12))' 
     }}
   >
     {/* Bow Loops */}
-    <path d="M50 40 C32 12 12 12 12 32 C12 52 32 45 50 40" fill="rgba(207, 232, 225, 0.9)" stroke="var(--mint-blue)" strokeWidth="1" />
-    <path d="M50 40 C68 12 88 12 88 32 C88 52 68 45 50 40" fill="rgba(207, 232, 225, 0.9)" stroke="var(--mint-blue)" strokeWidth="1" />
+    <path d="M50 40 C32 12 12 12 12 32 C12 52 32 45 50 40" fill="rgba(207, 232, 225, 0.95)" stroke="var(--mint-blue)" strokeWidth="1" />
+    <path d="M50 40 C68 12 88 12 88 32 C88 52 68 45 50 40" fill="rgba(207, 232, 225, 0.95)" stroke="var(--mint-blue)" strokeWidth="1" />
     
     {/* Ribbon tails */}
-    <path d="M50 40 C46 55 32 75 14 78" fill="none" stroke="rgba(207, 232, 225, 0.9)" strokeWidth="5.5" strokeLinecap="round" />
+    <path d="M50 40 C46 55 32 75 14 78" fill="none" stroke="rgba(207, 232, 225, 0.95)" strokeWidth="5.5" strokeLinecap="round" />
     <path d="M50 40 C46 55 32 75 14 78" fill="none" stroke="var(--mint-blue)" strokeWidth="1" strokeLinecap="round" />
     
-    <path d="M50 40 C54 55 68 75 86 78" fill="none" stroke="rgba(207, 232, 225, 0.9)" strokeWidth="5.5" strokeLinecap="round" />
+    <path d="M50 40 C54 55 68 75 86 78" fill="none" stroke="rgba(207, 232, 225, 0.95)" strokeWidth="5.5" strokeLinecap="round" />
     <path d="M50 40 C54 55 68 75 86 78" fill="none" stroke="var(--mint-blue)" strokeWidth="1" strokeLinecap="round" />
 
     {/* Daisy in Center */}
@@ -202,20 +198,20 @@ const FlowingRibbon = () => (
       height: '105px', 
       zIndex: -2,
       pointerEvents: 'none',
-      filter: 'drop-shadow(0 5px 10px rgba(49, 68, 74, 0.08))'
+      filter: 'drop-shadow(0 4px 8px rgba(49, 68, 74, 0.08))'
     }}
   >
     <path 
       d="M10 60 C80 35 180 115 280 55 C330 25 365 40 390 60" 
       fill="none" 
-      stroke="rgba(207, 232, 225, 0.5)" 
+      stroke="rgba(207, 232, 225, 0.55)" 
       strokeWidth="24" 
       strokeLinecap="round" 
     />
     <path 
       d="M10 60 C80 35 180 115 280 55 C330 25 365 40 390 60" 
       fill="none" 
-      stroke="rgba(111, 184, 184, 0.22)" 
+      stroke="rgba(111, 184, 184, 0.2)" 
       strokeWidth="25" 
       strokeLinecap="round" 
       strokeDasharray="1 16"
@@ -235,7 +231,7 @@ const HeartIcon = ({ filled }) => (
     style={{ 
       margin: '0 4px', 
       transition: 'all 0.3s ease',
-      filter: filled ? 'drop-shadow(0 0 4px rgba(111,184,184,0.5))' : 'none'
+      filter: filled ? 'drop-shadow(0 0 4px rgba(111,184,184,0.4))' : 'none'
     }}
   >
     <path d="M12 21 C12 21 3 13.5 3 8.5 C3 5.5 5.5 3 8.5 3 C10.5 3 11.5 4.5 12 5 C12.5 4.5 13.5 3 15.5 3 C18.5 3 21 5.5 21 8.5 C21 13.5 12 21 12 21 Z" />
@@ -318,7 +314,7 @@ export default function PasscodeScreen({ onSuccess }) {
           align-items: center;
           justify-content: center;
           gap: 90px;
-          max-width: 980px;
+          max-width: 1200px;
           width: 100%;
           z-index: 10;
           position: relative;
@@ -331,35 +327,35 @@ export default function PasscodeScreen({ onSuccess }) {
           position: relative;
         }
 
-        /* Rotated soft envelope backing behind polaroid */
+        /* Scaled up soft envelope backing behind polaroid */
         .polaroid-envelope-bg {
           position: absolute;
-          width: 290px;
-          height: 310px;
-          background-color: rgba(207, 232, 225, 0.45);
+          width: 490px; /* Even wider Polaroid backing */
+          height: 580px; /* Longer Polaroid backing */
+          background-color: rgba(176, 215, 215, 0.7);
           backdrop-filter: blur(2px);
-          border: 1px solid rgba(255,255,255,0.4);
+          border: 1px solid rgba(255,255,255,0.5);
           border-radius: 12px;
-          transform: rotate(-10deg) translate(-15px, 20px);
+          transform: rotate(-10deg) translate(-25px, 20px);
           z-index: -1;
-          box-shadow: -8px 12px 24px rgba(49, 68, 74, 0.08);
+          box-shadow: -12px 16px 40px rgba(49, 68, 74, 0.08);
         }
 
         .polaroid-card-box {
-          width: 280px;
+          width: 480px; /* Even wider Polaroid card */
           position: relative;
           z-index: 2;
         }
 
-        /* Custom washi tape grid effect */
+        /* Custom washi tape grid effect scaled up */
         .washi-tape {
           position: absolute;
-          top: -15px;
+          top: -16px;
           left: 50%;
           transform: translateX(-50%) rotate(-1deg);
-          width: 90px;
-          height: 24px;
-          background-color: rgba(207, 232, 225, 0.8);
+          width: 160px; /* Wider tape */
+          height: 32px;
+          background-color: rgba(207, 232, 225, 0.85);
           background-image: 
             repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(111, 184, 184, 0.2) 5px, rgba(111, 184, 184, 0.2) 10px),
             repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(111, 184, 184, 0.15) 5px, rgba(111, 184, 184, 0.15) 10px);
@@ -372,18 +368,19 @@ export default function PasscodeScreen({ onSuccess }) {
 
         .polaroid-inner-card {
           width: 100%;
-          height: 300px;
+          height: 520px; /* Longer Polaroid photo aspect ratio */
           background: linear-gradient(135deg, #CFE8E1 0%, #E8F2EF 100%);
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
           border-radius: 4px;
+          border: 1px solid rgba(111, 184, 184, 0.1);
         }
 
         .polaroid-inner-letter {
           font-family: var(--font-serif);
-          font-size: 54px;
+          font-size: 110px; /* Bigger monogram text */
           font-weight: 300;
           color: var(--text);
           margin-bottom: 2px;
@@ -391,12 +388,12 @@ export default function PasscodeScreen({ onSuccess }) {
 
         .polaroid-inner-sub {
           font-family: var(--font-hand);
-          font-size: 24px;
+          font-size: 42px; /* Bigger subtext */
           color: var(--mint-blue);
           opacity: 0.85;
         }
 
-        /* Keypad Card Styling */
+        /* Light-glassmorphic Keypad Card */
         .keypad-container {
           width: 380px;
           padding: 45px 30px;
@@ -447,7 +444,7 @@ export default function PasscodeScreen({ onSuccess }) {
           margin-bottom: 15px;
         }
 
-        /* Tactile Neumorphic Buttons */
+        /* Light Neumorphic Tactile Buttons */
         .neumorphic-btn {
           width: 58px;
           height: 58px;
@@ -455,8 +452,8 @@ export default function PasscodeScreen({ onSuccess }) {
           border: 1px solid rgba(255, 255, 255, 0.7);
           background: linear-gradient(135deg, #FFFFFF 0%, #F5FAF9 100%);
           box-shadow: 
-            -3px -3px 8px rgba(255, 255, 255, 0.9), 
-            3px 3px 8px rgba(111, 184, 184, 0.18);
+            -3px -3px 8px rgba(255, 255, 255, 0.95), 
+            3px 3px 8px rgba(111, 184, 184, 0.16);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -472,8 +469,8 @@ export default function PasscodeScreen({ onSuccess }) {
         .neumorphic-btn:hover {
           transform: translateY(-1px);
           box-shadow: 
-            -4px -4px 10px rgba(255, 255, 255, 0.95), 
-            4px 4px 10px rgba(111, 184, 184, 0.22);
+            -4px -4px 10px rgba(255, 255, 255, 0.98), 
+            4px 4px 10px rgba(111, 184, 184, 0.2);
         }
 
         .neumorphic-btn:active {
@@ -501,7 +498,7 @@ export default function PasscodeScreen({ onSuccess }) {
           font-size: 12px;
           color: var(--text);
           opacity: 0.8;
-          background: rgba(255, 255, 255, 0.35);
+          background: rgba(255, 255, 255, 0.4);
           margin-top: 40px;
           box-shadow: 0 4px 10px rgba(111, 184, 184, 0.04);
         }
@@ -511,7 +508,7 @@ export default function PasscodeScreen({ onSuccess }) {
           font-weight: 500;
         }
 
-        @media (max-width: 820px) {
+        @media (max-width: 980px) {
           .passcode-screen {
             flex-direction: column;
             gap: 75px;
@@ -519,7 +516,15 @@ export default function PasscodeScreen({ onSuccess }) {
           }
 
           .polaroid-envelope-bg {
-            display: none; /* simplifies layout on narrow mobile screens */
+            display: none;
+          }
+
+          .polaroid-card-box {
+            width: 360px;
+          }
+          
+          .polaroid-inner-card {
+            height: 330px;
           }
 
           .keypad-container {
@@ -531,12 +536,12 @@ export default function PasscodeScreen({ onSuccess }) {
 
       {/* Decorative Baby's Breath Flowers placed behind cards */}
       <BabysBreath style={{ left: '-50px', top: '-110px' }} scale={0.9} rotate={-15} />
-      <BabysBreath style={{ left: '190px', top: '-130px' }} scale={0.8} rotate={35} />
+      <BabysBreath style={{ left: '350px', top: '-130px' }} scale={0.8} rotate={35} />
       <BabysBreath style={{ right: '-50px', bottom: '-50px' }} scale={0.9} rotate={160} />
 
       {/* Polaroid Hanging Photo Section */}
       <div className="polaroid-holder">
-        {/* Rotated envelope behind */}
+        {/* Rotated soft envelope backing */}
         <div className="polaroid-envelope-bg"></div>
 
         <motion.div
@@ -566,7 +571,7 @@ export default function PasscodeScreen({ onSuccess }) {
           {/* Scalloped tag sticker attached to polaroid */}
           <ScallopedTag />
 
-          <div className="polaroid-caption">
+          <div className="polaroid-caption" style={{ fontSize: '40px' }}>
             Happy Birthday <span style={{ color: 'var(--mint-blue)' }}>🩵</span>
           </div>
         </motion.div>
