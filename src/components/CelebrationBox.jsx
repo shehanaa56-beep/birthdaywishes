@@ -104,8 +104,8 @@ export default function CelebrationBox({ onBack, onComplete }) {
           align-self: flex-start;
           font-family: var(--font-hand);
           font-size: 20px;
-          color: var(--text);
-          opacity: 0.6;
+          color: #E8F2EF;
+          opacity: 0.8;
           cursor: pointer;
           background: none;
           border: none;
@@ -114,10 +114,12 @@ export default function CelebrationBox({ onBack, onComplete }) {
           gap: 6px;
           margin-bottom: 30px;
           transition: all 0.2s ease;
+          text-shadow: 0 1px 3px rgba(30, 62, 62, 0.15);
         }
 
         .back-link:hover {
           opacity: 1;
+          color: #FFFFFF;
           transform: translateX(-3px);
         }
 
@@ -129,22 +131,27 @@ export default function CelebrationBox({ onBack, onComplete }) {
         .celebration-intro-hint {
           font-family: var(--font-hand);
           font-size: 24px;
-          color: var(--mint-blue);
+          color: #EAD575; /* Soft metallic gold */
+          font-weight: bold;
           margin-bottom: 6px;
+          text-shadow: 0 1px 3px rgba(30, 62, 62, 0.2);
         }
 
         .celebration-title {
           font-family: var(--font-serif);
-          font-size: 40px;
+          font-size: 44px;
           font-weight: 400;
-          color: var(--text);
+          color: #FFFFFF; /* High contrast white */
           margin-bottom: 8px;
+          text-shadow: 0 2px 10px rgba(30, 62, 62, 0.25);
         }
 
         .celebration-desc {
-          font-size: 13px;
-          color: var(--text);
-          opacity: 0.6;
+          font-family: var(--font-sans);
+          font-size: 14px;
+          color: #E8F2EF; /* Ivory/white description */
+          opacity: 0.9;
+          text-shadow: 0 1px 4px rgba(30, 62, 62, 0.15);
         }
 
         /* 3D Styled CSS Birthday Cake */
@@ -307,6 +314,30 @@ export default function CelebrationBox({ onBack, onComplete }) {
         .gift-reveal-footer-link:hover {
           opacity: 0.8;
         }
+
+        .garden-btn {
+          background-color: var(--mint-blue);
+          color: var(--white);
+          font-family: var(--font-serif);
+          font-size: 15px;
+          letter-spacing: 1.5px;
+          padding: 16px 36px;
+          border-radius: 50px;
+          border: none;
+          cursor: pointer;
+          box-shadow: 0 8px 24px rgba(111, 184, 184, 0.35);
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .garden-btn:hover {
+          background-color: #5AA1A1;
+          transform: translateY(-2px) scale(1.03);
+          box-shadow: 0 12px 30px rgba(111, 184, 184, 0.45);
+        }
+
+        .garden-btn:active {
+          transform: translateY(1px) scale(0.99);
+        }
       `}</style>
 
       {/* Back link */}
@@ -316,7 +347,7 @@ export default function CelebrationBox({ onBack, onComplete }) {
 
       {/* Header */}
       <div className="celebration-header">
-        <div className="celebration-intro-hint">box three</div>
+        <div className="celebration-intro-hint">✦ box three ✦</div>
         <h1 className="celebration-title">Make A Wish</h1>
         <p className="celebration-desc">
           {!isBlownOut ? "Tap the candle when you're ready." : "Wish sent into the cosmos! ✨"}

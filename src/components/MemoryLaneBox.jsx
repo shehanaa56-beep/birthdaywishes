@@ -64,8 +64,8 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
           align-self: flex-start;
           font-family: var(--font-hand);
           font-size: 20px;
-          color: var(--text);
-          opacity: 0.6;
+          color: #E8F2EF;
+          opacity: 0.8;
           cursor: pointer;
           background: none;
           border: none;
@@ -74,10 +74,12 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
           gap: 6px;
           margin-bottom: 30px;
           transition: all 0.2s ease;
+          text-shadow: 0 1px 3px rgba(30, 62, 62, 0.15);
         }
 
         .back-link:hover {
           opacity: 1;
+          color: #FFFFFF;
           transform: translateX(-3px);
         }
 
@@ -89,24 +91,30 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
         .memory-intro-hint {
           font-family: var(--font-hand);
           font-size: 24px;
-          color: var(--mint-blue);
+          color: #EAD575; /* Soft metallic gold */
+          font-weight: bold;
           margin-bottom: 6px;
+          text-shadow: 0 1px 3px rgba(30, 62, 62, 0.2);
         }
 
         .memory-title {
           font-family: var(--font-serif);
-          font-size: 40px;
+          font-size: 44px;
           font-weight: 400;
-          color: var(--text);
+          color: #FFFFFF; /* High contrast white */
           margin-bottom: 8px;
+          text-shadow: 0 2px 10px rgba(30, 62, 62, 0.25);
         }
 
         .memory-desc {
-          font-size: 13px;
-          color: var(--text);
-          opacity: 0.6;
+          font-family: var(--font-sans);
+          font-size: 14px;
+          color: #E8F2EF; /* Ivory/white description */
+          opacity: 0.9;
           max-width: 450px;
           margin: 0 auto;
+          line-height: 1.5;
+          text-shadow: 0 1px 4px rgba(30, 62, 62, 0.15);
         }
 
         /* Scrapbook board grid layout */
@@ -206,7 +214,7 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
 
       {/* Header */}
       <div className="memory-header">
-        <div className="memory-intro-hint">box two</div>
+        <div className="memory-intro-hint">✦ box two ✦</div>
         <h1 className="memory-title">Memory Lane</h1>
         <p className="memory-desc">
           A little scrapbook. Hover the polaroids — they remember being held.

@@ -36,8 +36,8 @@ export default function LetterBox({ onBack, onComplete }) {
           align-self: flex-start;
           font-family: var(--font-hand);
           font-size: 20px;
-          color: var(--text);
-          opacity: 0.6;
+          color: #E8F2EF;
+          opacity: 0.8;
           cursor: pointer;
           background: none;
           border: none;
@@ -46,10 +46,12 @@ export default function LetterBox({ onBack, onComplete }) {
           gap: 6px;
           margin-bottom: 30px;
           transition: all 0.2s ease;
+          text-shadow: 0 1px 3px rgba(30, 62, 62, 0.15);
         }
 
         .back-link:hover {
           opacity: 1;
+          color: #FFFFFF;
           transform: translateX(-3px);
         }
 
@@ -61,15 +63,18 @@ export default function LetterBox({ onBack, onComplete }) {
         .letter-intro-hint {
           font-family: var(--font-hand);
           font-size: 24px;
-          color: var(--mint-blue);
+          color: #EAD575; /* Soft metallic gold */
+          font-weight: bold;
           margin-bottom: 6px;
+          text-shadow: 0 1px 3px rgba(30, 62, 62, 0.2);
         }
 
         .letter-title {
           font-family: var(--font-serif);
-          font-size: 40px;
+          font-size: 44px;
           font-weight: 400;
-          color: var(--text);
+          color: #FFFFFF; /* High contrast white */
+          text-shadow: 0 2px 10px rgba(30, 62, 62, 0.25);
         }
 
         /* 3D Envelope Container */
@@ -325,7 +330,7 @@ export default function LetterBox({ onBack, onComplete }) {
 
       {/* Header */}
       <div className="letter-header">
-        <div className="letter-intro-hint">box one</div>
+        <div className="letter-intro-hint">✦ box one ✦</div>
         <h1 className="letter-title">A Letter For You</h1>
       </div>
 

@@ -43,19 +43,22 @@ export default function SecretGarden({ onBack }) {
         .garden-intro-hint {
           font-family: var(--font-hand);
           font-size: 26px;
-          color: var(--mint-blue);
+          color: #EAD575; /* Soft metallic gold */
+          font-weight: bold;
           margin-bottom: 24px;
           letter-spacing: 1px;
+          text-shadow: 0 1px 3px rgba(30, 62, 62, 0.2);
         }
 
         .garden-quote {
           font-family: var(--font-serif);
           font-size: 48px;
           font-weight: 300;
-          line-height: 1.4;
-          color: var(--text);
+          line-height: 1.45;
+          color: #FFFFFF; /* High contrast white */
           max-width: 650px;
-          margin-bottom: 30px;
+          margin-bottom: 35px;
+          text-shadow: 0 2px 10px rgba(30, 62, 62, 0.25);
         }
 
         .daisy-row {
@@ -67,7 +70,7 @@ export default function SecretGarden({ onBack }) {
 
         .garden-subtitle {
           font-family: var(--font-hand);
-          font-size: 26px;
+          font-size: 28px;
           color: var(--text);
           opacity: 0.85;
           margin-bottom: 50px;
@@ -76,6 +79,30 @@ export default function SecretGarden({ onBack }) {
         .garden-back-btn-container {
           display: flex;
           justify-content: center;
+        }
+
+        .garden-btn {
+          background-color: var(--mint-blue);
+          color: var(--white);
+          font-family: var(--font-serif);
+          font-size: 15px;
+          letter-spacing: 1.5px;
+          padding: 16px 36px;
+          border-radius: 50px;
+          border: none;
+          cursor: pointer;
+          box-shadow: 0 8px 24px rgba(111, 184, 184, 0.35);
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .garden-btn:hover {
+          background-color: #5AA1A1;
+          transform: translateY(-2px) scale(1.03);
+          box-shadow: 0 12px 30px rgba(111, 184, 184, 0.45);
+        }
+
+        .garden-btn:active {
+          transform: translateY(1px) scale(0.99);
         }
 
         @media (max-width: 768px) {
