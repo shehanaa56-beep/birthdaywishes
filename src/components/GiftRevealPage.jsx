@@ -282,7 +282,7 @@ export default function GiftRevealPage({ onNext }) {
         transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 100 }}
       >
         <div className="polaroid-tape"></div>
-        <img src="/images/1.jpeg" alt="Us" className="polaroid-img" />
+        <img src="/images/m6.jpeg" alt="Us" className="polaroid-img" />
         <div className="polaroid-text">love you</div>
 
         {/* Next Button Overlaying the Polaroid */}
